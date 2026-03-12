@@ -1,0 +1,30 @@
+yaml_version: 6
+
+project:
+  title: "IAIONEX Sovereign"
+  author: "Johan Gartner"
+  description: "8-bit RISC CPU"
+  language: "Verilog"
+  clock_hz: 50000000
+
+pinout:
+  ui_in:  [unused, unused, unused, unused, unused, unused, unused, unused]
+  uo_out: [out0, out1, out2, out3, out4, out5, out6, out7]
+  uio_in: [unused, unused, unused, unused, unused, unused, unused, unused]
+  uio_out: [unused, unused, unused, unused, unused, unused, unused, unused]
+  uio_oe: [unused, unused, unused, unused, unused, unused, unused, unused]
+
+source_files:
+  - tt_um_iaionex_sovereign_v1.v
+  - sovereign_cpu_top.v
+  - sovereign_rom.v
+  - sovereign_regfile.v
+  - sovereign_adder_8bit.v
+  - sovereign_sub_8bit.v
+  - sovereign_decoder.v
+  - sovereign_logic_unit.v
+  - sovereign_mult_8bit.v
+  - sovereign_shifter_8bit.v
+  - sky130_primitives.v
+
+top_module: "tt_um_iaionex_sovereign_v1"
